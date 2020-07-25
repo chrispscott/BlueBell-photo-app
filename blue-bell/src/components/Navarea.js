@@ -4,7 +4,10 @@ class Navarea extends Component {
     render() {
         return (
             <div>
-                <h1>this is the nav area</h1>
+                <a src='##'><i class="fa fa-home" aria-hidden="true"></i></a>
+                <a src='##'><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+                <a src='##'><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+                
             </div>
         );
     }
