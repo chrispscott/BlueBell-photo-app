@@ -1,16 +1,36 @@
 import React, { Component } from 'react';
+import { makeStyles } from "@material-ui/core/styles";
+import BottomNavigation from "@material-ui/core/BottomNavigation";
+import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import LocationOnIcon from "@material-ui/icons/LocationOn";
+import HomeIcon from "@material-ui/icons/Home";
+import PeopleIcon from "@material-ui/icons/People";
+import PanoramaIcon from "@material-ui/icons/Panorama";
+const useStyles = makeStyles({
+  root: {
+    width: 500
+  }
+});
 
-class Navarea extends Component {
-    render() {
-        return (
-            <div>
-                <a src='##'><i class="fa fa-home" aria-hidden="true">home</i></a>
-                <a src='##'><i class="fa fa-user-circle" aria-hidden="true">pics</i></a>
-                <a src='##'><i class="fa fa-picture-o" aria-hidden="true">pic</i></a>
-                
-            </div>
-        );
-    }
+export default function SimpleBottomNavigation() {
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  return (
+    <BottomNavigation
+      value={value}
+      onChange={(event, newValue) => {
+        setValue(newValue);
+      }}
+      showLabels
+      className={classes.root}
+    >
+      <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+      <BottomNavigationAction label="People" icon={<PeopleIcon />} />
+      <BottomNavigationAction label="Panorama" icon={<PanoramaIcon />} />
+    </BottomNavigation>
+  );
 }
 
-export default Navarea;
+
