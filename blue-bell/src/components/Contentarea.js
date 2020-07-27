@@ -5,18 +5,41 @@ import HLA3 from '../assets/muriel2.jpg';
 import HLA4 from '../assets/muriel3.jpg';
 import HLA5 from '../assets/selfie3.jpg';
 import HLA6 from '../assets/eustace1.jpg';
+import Grid from '@material-ui/core/Grid';
+import Card from '@material-ui/core/Card';
+import Card1 from './Card1';
+import Card2 from './Card2';
+import Card3 from './Card3';
+import Card4 from './Card4';
+import Card5 from './Card5';
+import Card6 from './Card6';
+
+
 
 class Contentarea extends Component {
     render() {
         return (
-            <div>
-                <h1>This is the content area</h1>
-                <img className='pic1' src={HLA1}></img>
-                <img className='pic2' src={HLA2}></img>
-                <img className='pic3' src={HLA3}></img>
-                <img className='pic4' src={HLA4}></img>
-                <img className='pic5' src={HLA5}></img>
-                <img className='pic6' src={HLA6}></img>
+            <div className='postbox'>
+                <Grid className='container' container spacing={3}>
+                    <Grid item xs={4}>
+                      <Card1/>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <Card2/>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <Card3/>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <Card4/>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <Card5/>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <Card6/>
+                    </Grid>
+                </Grid>
             </div>
         );
     }

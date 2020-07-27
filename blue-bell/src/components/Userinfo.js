@@ -5,10 +5,15 @@ class Userinfo extends Component {
     render() {
         return (
             <div className='container2'>
-                <img src={SELFIE}></img>
-                <h3>posts</h3>
-                <h3>friends</h3>
-                <section>Blah Blah Blah </section>
+                <section className='profile-image'>
+                    <h3> Courage</h3>
+                    <img className='profile' src={SELFIE}></img>
+                </section>
+                <section className='profile-info'>
+                <h3 className='num-posts'>posts</h3>
+                <h3 className='num-friends'>friends</h3>
+                <section className='about'>Blah Blah Blah </section>
+                </section>
             </div>
         );
     }
