@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '56.25%'
   }
   
+  
 }));
 
 export default function RecipeReviewCard() {
