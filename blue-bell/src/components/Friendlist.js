@@ -27,7 +27,6 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 class Friendlist extends Component {
 
 
-    
     render() {
         return (
             <div>
